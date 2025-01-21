@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "32ef6f01-3146-4605-846f-d3d2c7d4f7bd",
+		"name": "TiendaApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37605902"
+	},
+	"item": [
+		{
+			"name": "crear orden",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cliente\": {\r\n        \"tipo_documento\": \"1\",\r\n        \"nro_documento\": \"78451236\",\r\n        \"nombre\": \"Luis\",\r\n        \"apellido\": \"Caichop\",\r\n        \"telefono\": \"978456123\",\r\n        \"email\": \"emailcorreo@gmail.com\"\r\n    },\r\n    \"tipo_documento_ord\": \"1\",\r\n    \"total\": 1,\r\n    \"detalles\": [\r\n        {\r\n            \"libro_id\": 1,\r\n            \"cantidad\": 5,\r\n            \"precio\": 521.25\r\n        },\r\n        {\r\n            \"libro_id\": 2,\r\n            \"cantidad\": 2,\r\n            \"precio\": 198\r\n        },\r\n        {\r\n            \"libro_id\": 4,\r\n            \"cantidad\": 1,\r\n            \"precio\": 74.93\r\n        },\r\n        {\r\n            \"libro_id\": 5,\r\n            \"cantidad\": 1,\r\n            \"precio\": 59.9\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/cliente-orden",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cliente-orden"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getLibros",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"param\": \"9781400334780\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/libros",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"libros"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
